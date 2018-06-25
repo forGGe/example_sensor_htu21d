@@ -7,10 +7,10 @@
 //! \details Example shows how to use HTU21D sensor to get temperature
 //! and humidity data.
 
-#include "target.hpp"
 
 #include <ecl/iostream.hpp>
 #include <ecl/thread/utils.hpp>
+#include <ecl/core_generated.hpp>
 
 extern "C"
 void board_init()
@@ -38,19 +38,19 @@ int main()
     ecl::cout << "Starting HTU21D sensor..." << ecl::endl;
 
     // Initialize HTU21D sensor
-    ecl::htu21d::init();
-    ecl::htu21d::soft_reset();
+    ecl::htu21d_sensor::init();
+    ecl::htu21d_sensor::soft_reset();
 
     ecl::cout << "Reset done" << ecl::endl;
 
     while (true) {
         int temperature = 0;
-        ecl::htu21d::get_temperature(temperature);
+        ecl::htu21d_sensor::get_temperature(temperature);
 
         ecl::cout << "Temperature: " << measurement(temperature) << " Celsius   ";
 
         int humidity = 0;
-        ecl::htu21d::get_humidity(humidity);
+        ecl::htu21d_sensor::get_humidity(humidity);
 
         ecl::cout << "Humidity: " << measurement(humidity) << "%" << ecl::endl;
 

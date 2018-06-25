@@ -58,6 +58,31 @@
                 "config-source": "systick",
                 "config-freq": "100",
                 "config-owner": "user"
+            },
+            "menu-i2c": {
+                "table-i2c": [
+                    "I2C1"
+                ],
+                "menu-I2C1": {
+                    "config-mode": "IRQ",
+                    "config-speed": "1000",
+                    "config-duty-cycle": "2/1",
+                    "config-ack": true,
+                    "config-ack-addr-bit": 7,
+                    "config-own-address": "51"
+                }
+            }
+        }
+    },
+    "menu-dev": {
+        "menu-sensors": {
+            "menu-cs43l22": {
+                "table-cs43l22-dev": [
+                    "htu21d_sensor"
+                ],
+                "menu-htu21d_sensor": {
+                    "config-i2c": "I2C1"
+                }
             }
         }
     }
