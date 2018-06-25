@@ -8,8 +8,11 @@
 //! and humidity data.
 
 
+// For ecl::cout and ecl::endl
 #include <ecl/iostream.hpp>
+// For utilities
 #include <ecl/thread/utils.hpp>
+// For auto-generated files
 #include <ecl/core_generated.hpp>
 
 extern "C"

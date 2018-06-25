@@ -76,8 +76,8 @@
     },
     "menu-dev": {
         "menu-sensors": {
-            "menu-cs43l22": {
-                "table-cs43l22-dev": [
+            "menu-htu21d": {
+                "table-htu21d-dev": [
                     "htu21d_sensor"
                 ],
                 "menu-htu21d_sensor": {

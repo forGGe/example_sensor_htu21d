@@ -17,7 +17,7 @@ project(htu21d_example)
 add_executable(htu21d_example main.cpp)
 
 # Some dependencies
-target_link_libraries(htu21d_example the_core core_cpp htu21d bus)
+target_link_libraries(htu21d_example the_core)
 
 # Include theCore into the build process
 add_subdirectory(${CORE_DIR} ${CMAKE_CURRENT_BINARY_DIR}/core)
